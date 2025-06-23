@@ -4,6 +4,7 @@ const { dynamoDb } = require('../config/db');
 const config = require('../config');
 
 class User {
+  
   constructor(data) {
     this.userId    = data.userId    || uuidv4();
     this.email     = data.email;

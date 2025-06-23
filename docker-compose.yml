@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  auth-service:
+    build: ./auth-service
+    ports: ["3001:3001"]
+    env_file: ./auth-service/.env
+
+  authorization-service:
+    build: ./authorization-service
+    ports: ["	3003:3003"]
+    env_file: ./authorization-service/.env
+
+  registration-service:
+    build: ./registration-service
+    ports: ["3002:3002"]
+    env_file: ./registration-service/.env
+
+  user-validation-service:
+    build: ./user-validation-service
+    ports: ["3004:3004"]
+    env_file: ./user-validation-service/.env

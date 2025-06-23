@@ -1,4 +1,4 @@
-# Dockerfile
+# Dockerfile for User Validation Service
 FROM node:18-alpine
 
 # Crear directorio de trabajo
@@ -8,13 +8,14 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 
 # Instalar dependencias
-RUN npm install
+RUN npm ci
 
 # Copiar código fuente
 COPY . .
 
-# Puerto que expone el contenedor
-EXPOSE 3000
 
-# Comando para ejecutar la aplicación
+# Cada servicio expone su propio puerto interno:
+EXPOSE 3002
+
 CMD ["node", "src/server.js"]
+# CMD ["npm", "start"]

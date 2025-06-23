@@ -1,17 +1,9 @@
-// src/config/db.js
 const AWS = require('aws-sdk');
 const config = require('./index');
 
-// Configurar AWS
-AWS.config.update({
-  accessKeyId: config.aws.accessKeyId,
-  secretAccessKey: config.aws.secretAccessKey,
-  region: config.aws.region,
-});
+// Solo región: las credenciales las toma del Instance Profile
+AWS.config.update({ region: config.aws.region });
 
-// Crear cliente de DynamoDB
 const dynamoDb = new AWS.DynamoDB.DocumentClient();
 
-module.exports = {
-  dynamoDb,
-};
+module.exports = { dynamoDb };
