@@ -1,5 +1,5 @@
 // src/config/index.js
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
 const result = dotenv.config();
 if (result.error) {

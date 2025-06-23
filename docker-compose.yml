@@ -7,7 +7,7 @@ services:
 
   authorization-service:
     build: ./authorization-service
-    ports: ["	3003:3003"]
+    ports: ["3003:3003"]
     env_file: ./authorization-service/.env
 
   registration-service:

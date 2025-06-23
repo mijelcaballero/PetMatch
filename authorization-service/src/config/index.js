@@ -1,5 +1,5 @@
 // src/config/index.js
-import dotenv from 'dotenv';
+const dotenv = require('dotenv');
 
 const result = dotenv.config();
 if (result.error) {
@@ -11,17 +11,6 @@ module.exports = {
 
   port: process.env.PORT || 3000,
   env:  process.env.NODE_ENV || 'development',
-
-  // Solo para auth-service:
-  jwt: {
-    secret:    (() => {
-      if (!process.env.JWT_SECRET) {
-        throw new Error('JWT_SECRET environment variable is not defined');
-      }
-      return process.env.JWT_SECRET;
-    })(),
-    expiresIn: process.env.JWT_EXPIRATION,
-  },
 
   aws: {
     // El SDK tomará credentials del Instance Profile
