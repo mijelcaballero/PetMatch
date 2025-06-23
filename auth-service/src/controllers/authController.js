@@ -1,4 +1,5 @@
 // src/controllers/authController.js
+const User = require('../models/user');
 
 const { loginUser } = require('../services/auth.service');
 
