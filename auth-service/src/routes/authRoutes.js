@@ -1,9 +1,12 @@
+// src/routes/authRoutes.js
+
 const express = require('express');
 const router = express.Router();
 const { login, getProfile } = require('../controllers/authController');
-const { authenticate } = require('../middlewares/auth'); // Importa correctamente como función
+const { authenticate } = require('../middlewares/auth'); // valida JWT
+
 
 router.post('/login', login);
-router.get('/profile', authenticate, getProfile); // Usa la función directamente como middleware
+router.get('/profile', authenticate, getProfile);
 
 module.exports = router;
