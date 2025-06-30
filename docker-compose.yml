@@ -19,3 +19,8 @@ services:
     build: ./user-validation-service
     ports: ["3004:3004"]
     env_file: ./user-validation-service/.env
+
+  basic-match-service:
+    build: ./basic-match-service
+    ports: ["3007:3007"]
+    env_file: ./basic-match-service/.env
