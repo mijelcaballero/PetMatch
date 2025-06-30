@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package advancedmatch;
+
+service AdvancedMatch {
+  // Recibe un user_id y devuelve un stream de posibles match avanzados
+  rpc GetAdvancedMatches (MatchRequest) returns (stream MatchResult);
+}
+
+message MatchRequest {
+  string user_id = 1;
+}
+
+message MatchResult {
+  string match_id   = 1;
+  double score      = 2; // score de similitud avanzado
+  repeated string factors = 3; // factores que influyeron
+}
+
+
+
