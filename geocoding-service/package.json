@@ -1,0 +1,14 @@
+{
+  "name": "geocoding-service",
+  "version": "1.0.0",
+  "description": "Geocoding service using Google Maps API",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.5.0",
+    "express": "^4.18.2"
+  }
+}

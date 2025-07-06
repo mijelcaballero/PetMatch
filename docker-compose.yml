@@ -24,3 +24,61 @@ services:
     build: ./basic-match-service
     ports: ["3007:3007"]
     env_file: ./basic-match-service/.env
+
+  advanced-match-service:
+    build: ./advanced-match-service
+    ports: ["3008:3008"]
+    env_file: ./advanced-match-service/.env
+
+  chat-rt-service:
+    build: ./chat-rt-service
+    ports: ["3009:3009"]
+    env_file: ./chat-rt-service/.env    
+
+  chat-history-service:
+    build: ./chat-history-service
+    ports: ["3010:3010"]
+    env_file: ./chat-history-service/.env    
+
+  communities-service:
+    build: ./communities-service
+    ports: ["3011:3011"]
+    env_file: ./communities-service/.env
+
+  image-service:
+    build: ./image-service
+    ports: ["3012:3012"]
+    env_file: ./image-service/.env        
+
+  video-service:
+    build: ./video-service
+    ports: ["3013:3013"]
+    env_file: ./video-service/.env
+
+  recommendations-service:
+    build: ./recommendations-service
+    ports: ["3014:3014"]
+    env_file: ./recommendations-service/.env
+
+  alerts-service:
+    build: ./alerts-service
+    ports: ["3015:3015"]
+    env_file: ./alerts-service/.env
+    
+  moderation-service:
+    build: ./moderation-service
+    ports: ["3016:3016"]
+    env_file: ./moderation-service/.env
+
+  push-notif-service:
+    build: ./push-notif-service
+    ports: ["3017:3017"]
+    env_file: ./push-notif-service/.env
+
+  email-service:
+    build: ./email-service
+    ports: ["3018:3018"]
+    env_file: ./email-service/.env
+
+
+
