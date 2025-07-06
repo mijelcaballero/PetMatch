@@ -11,6 +11,6 @@ COPY src src
 
 ENV PORT=3018
 
-EXPOSE 3018
+EXPOSE 3019
 
 CMD ["python", "src/app.py"]

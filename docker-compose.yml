@@ -80,5 +80,15 @@ services:
     ports: ["3018:3018"]
     env_file: ./email-service/.env
 
+  geocoding-service:
+    build: ./geocoding-service    
+    ports: ["3019:3019"]
+    env_file: ./geocoding-service/.env    
+
+  geolocation-service:
+    build: ./geolocation-service
+    ports: ["3019:3019"]
+    env_file: ./geolocation-service/.env  
+
 
 
